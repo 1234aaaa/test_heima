@@ -1,0 +1,140 @@
+{
+  "test_login": [{
+    "case_name": "登录成功",
+    "request_body": {
+      "mobile": "13800000002",
+      "password": "123456"
+    },
+    "success": true,
+    "code": 10000,
+    "message": "操作成功",
+    "http_code": 200
+  }],
+  "test_emp": [
+    {
+      "case_name": "page为1size为10查询成功",
+      "params": {
+        "page": 1,
+        "size": 10
+      },
+      "success": true,
+      "code": 10000,
+      "message": "操作成功",
+      "http_code": 200
+    },
+    {
+      "case_name": "page为0查询失败",
+      "params": {
+        "page": 0,
+        "size": 10
+      },
+      "success": false,
+      "code": 99999,
+      "message": "抱歉，系统繁忙，请稍后重试",
+      "http_code": 200
+    },
+    {
+      "case_name": "size为0查询失败",
+      "params": {
+        "page": 1,
+        "size": 0
+      },
+      "success": false,
+      "code": 99999,
+      "message": "抱歉，系统繁忙，请稍后重试",
+      "http_code": 200
+    },
+    {
+      "case_name": "page为空查询失败",
+      "params": {
+        "page": "",
+        "size": 10
+      },
+      "success": false,
+      "code": 99999,
+      "message": "抱歉，系统繁忙，请稍后重试",
+      "http_code": 200
+    },
+    {
+      "case_name": "size为空查询失败",
+      "params": {
+        "page": 1,
+        "size": ""
+      },
+      "success": false,
+      "code": 99999,
+      "message": "抱歉，系统繁忙，请稍后重试",
+      "http_code": 200
+    },
+    {
+      "case_name": "无参查询失败",
+      "params": {},
+      "success": false,
+      "code": 99999,
+      "message": "抱歉，系统繁忙，请稍后重试",
+      "http_code": 200
+    },
+    {
+      "case_name": "传入null查询失败",
+      "params": null,
+      "success": false,
+      "code": 99999,
+      "message": "抱歉，系统繁忙，请稍后重试",
+      "http_code": 200
+    },
+    {
+      "case_name": "多参查询成功",
+      "params": {
+        "page": 1,
+        "size": 10,
+        "num": 1
+      },
+      "success": false,
+      "code": 10000,
+      "message": "操作成功",
+      "http_code": 200
+    },
+    {
+      "case_name": "缺少page参数查询失败",
+      "params": {
+        "size": 10
+      },
+      "success": false,
+      "code": 99999,
+      "message": "抱歉，系统繁忙，请稍后重试",
+      "http_code": 200
+    },
+    {
+      "case_name": "缺少size参数查询失败",
+      "params": {
+        "page": 1
+      },
+      "success": false,
+      "code": 99999,
+      "message": "抱歉，系统繁忙，请稍后重试",
+      "http_code": 200
+    },
+    {
+      "case_name": "错误参数page查询失败",
+      "params": {
+        "pag": 1,
+        "size": 10
+      },
+      "success": false,
+      "code": 99999,
+      "message": "抱歉，系统繁忙，请稍后重试",
+      "http_code": 200
+    },
+    {
+      "case_name": "错误参数size查询失败",
+      "params": {
+        "page": 1,
+        "sizeee": 10
+      },
+      "success": false,
+      "code": 99999,
+      "message": "抱歉，系统繁忙，请稍后重试",
+      "http_code": 200
+    }
+  ]
+}
